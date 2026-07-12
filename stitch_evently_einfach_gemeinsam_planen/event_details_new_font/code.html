@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventique - Event Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "primary-fixed-dim": "#c1cba6",
+                            "error": "#ba1a1a",
+                            "surface-container-low": "#f6f3f2",
+                            "primary": "#596244",
+                            "tertiary-fixed-dim": "#e7c268",
+                            "secondary": "#7d562d",
+                            "surface-container-lowest": "#ffffff",
+                            "tertiary": "#765a05",
+                            "background": "#fcf9f8",
+                            "surface-dim": "#dcd9d9",
+                            "tertiary-fixed": "#ffdf96",
+                            "on-primary-fixed-variant": "#424a2e",
+                            "error-container": "#ffdad6",
+                            "surface-variant": "#e4e2e1",
+                            "on-background": "#1b1c1c",
+                            "outline-variant": "#c7c7bb",
+                            "surface-tint": "#596244",
+                            "on-secondary-container": "#7a532a",
+                            "on-secondary": "#ffffff",
+                            "on-surface-variant": "#46483f",
+                            "on-surface": "#1b1c1c",
+                            "inverse-primary": "#c1cba6",
+                            "surface-container-high": "#eae7e7",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed-dim": "#f0bd8b",
+                            "primary-container": "#8e9775",
+                            "secondary-fixed": "#ffdcbd",
+                            "secondary-container": "#ffca98",
+                            "on-tertiary-fixed-variant": "#5a4400",
+                            "inverse-surface": "#303030",
+                            "on-primary-fixed": "#171e06",
+                            "on-tertiary-container": "#392a00",
+                            "primary-fixed": "#dee7c0",
+                            "on-secondary-fixed": "#2c1600",
+                            "surface-container": "#f0eded",
+                            "outline": "#77786e",
+                            "on-error": "#ffffff",
+                            "surface": "#fcf9f8",
+                            "on-tertiary-fixed": "#251a00",
+                            "surface-bright": "#fcf9f8",
+                            "tertiary-container": "#b08f3b",
+                            "on-secondary-fixed-variant": "#623f18",
+                            "inverse-on-surface": "#f3f0f0",
+                            "surface-container-highest": "#e4e2e1",
+                            "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "section-gap": "64px",
+                            "container-padding-mobile": "20px",
+                            "gutter": "24px",
+                            "container-padding-desktop": "80px",
+                            "base": "8px"
+                    },
+                    "fontFamily": {
+                            "headline-xl-mobile": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-xl": [
+                                    "Hanken Grotesk"
+                            ],
+                            "label-md": [
+                                    "Inter"
+                            ],
+                            "body-sm": [
+                                    "Inter"
+                            ],
+                            "headline-lg": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-md": [
+                                    "Hanken Grotesk"
+                            ],
+                            "body-lg": [
+                                    "Inter"
+                            ],
+                            "body-md": [
+                                    "Inter"
+                            ],
+                            "label-sm": [
+                                    "Inter"
+                            ]
+                    },
+                    "fontSize": {
+                            "headline-xl-mobile": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "headline-xl": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "56px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label-md": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-sm": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "headline-lg": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "label-sm": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.04em",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Form inputs styling for the requested aesthetic */
+        .elegant-input {
+            background-color: #F7F3F0; /* Soft beige background */
+            border: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .elegant-input:focus {
+            outline: none;
+            border-bottom: 2px solid #8E9775; /* Sage Green focus */
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(45, 45, 45, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Transactional intent, mostly empty except for close/back) -->
+<header class="w-full flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop py-4 bg-background z-50">
+<button class="flex items-center text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined mr-2 group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-md text-label-md hidden md:inline">Zurück</span>
+</button>
+<div class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight md:hidden">
+            Eventique
+        </div>
+<div class="font-headline-xl text-headline-xl text-primary tracking-tight hidden md:block">
+            Eventique
+        </div>
+<button class="flex items-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</header>
+<main class="flex-grow w-full max-w-[800px] mx-auto px-container-padding-mobile md:px-0 pt-8 pb-32 flex flex-col items-center">
+<!-- Progress Indicator -->
+<div class="w-full max-w-md mb-section-gap flex flex-col items-center">
+<p class="font-label-sm text-label-sm uppercase text-outline mb-4">Schritt 2 von 4</p>
+<div class="w-full flex items-center justify-between relative">
+<!-- Line background -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-variant -z-10 -translate-y-1/2"></div>
+<!-- Active Line progress -->
+<div class="absolute top-1/2 left-0 w-[33%] h-[2px] bg-secondary-container -z-10 -translate-y-1/2 transition-all duration-500 ease-out"></div>
+<!-- Dots -->
+<div class="w-4 h-4 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[10px] text-on-secondary-container" data-icon="check" data-weight="fill">check</span>
+</div>
+<div class="w-4 h-4 rounded-full bg-secondary-container shadow-sm ring-4 ring-background"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant"></div>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl mt-12 text-center text-on-surface">Event Details</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 text-center">Erzählen Sie uns mehr über Ihr geplantes Event.</p>
+</div>
+<!-- Form Area -->
+<form class="w-full flex flex-col gap-8 bg-surface-container-lowest rounded-[24px] p-6 md:p-12 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-[#F2F2F2]">
+<!-- Eventname -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="eventName">Eventname</label>
+<input class="elegant-input w-full rounded-lg px-4 py-4 text-body-md text-on-surface placeholder:text-outline-variant" id="eventName" placeholder="z.B. Sommergala 2024" type="text"/>
+</div>
+<!-- Date & Time Group -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+<!-- Date -->
+<div class="flex flex-col gap-2 relative">
+<label class="font-label-md text-label-md text-on-surface" for="eventDate">Datum</label>
+<div class="relative w-full">
+<input class="elegant-input w-full rounded-lg pl-12 pr-4 py-4 text-body-md text-on-surface placeholder:text-outline-variant cursor-pointer" id="eventDate" placeholder="TT.MM.JJJJ" type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="calendar_today">calendar_today</span>
+</div>
+</div>
+<!-- Time -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="eventTime">Uhrzeit</label>
+<div class="relative w-full">
+<input class="elegant-input w-full rounded-lg pl-12 pr-4 py-4 text-body-md text-on-surface placeholder:text-outline-variant cursor-pointer" id="eventTime" placeholder="19:00" type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="schedule">schedule</span>
+</div>
+</div>
+<!-- Toggle: Datum steht noch nicht fest -->
+<div class="md:col-span-2 flex items-center mt-2">
+<label class="relative inline-flex items-center cursor-pointer group">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ml-3 font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Datum steht noch nicht fest</span>
+</label>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="eventLocation">Location</label>
+<div class="relative w-full">
+<input class="elegant-input w-full rounded-lg pl-12 pr-4 py-4 text-body-md text-on-surface placeholder:text-outline-variant" id="eventLocation" placeholder="Ort oder Adresse suchen" type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="location_on">location_on</span>
+</div>
+<!-- Map Integration Placeholder -->
+<div class="mt-4 w-full h-48 rounded-xl overflow-hidden relative border border-surface-variant group cursor-pointer" data-alt="A detailed map view focusing on a modern, high-end European city center. The map style is minimalist, using a subtle color palette of pale beiges, soft greys, and muted greens for parks. It has a bright, light-mode aesthetic, looking clean, professional, and elegant, fitting for a premium concierge service application." data-location="Berlin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhuClMlfmeu2ElZI9c0OCEic1zUsjvPQVpAPo06riF1ICBzz60r64GagapO1qLaHbHHqoswrPonxbtRv3qCoQR_AVODRYo7TH6jWSCSniThdFMGDHQJJCgAwmW0zr7f95YOVusQfD09lTvq7DOeHueT6Kr4fVoCqIHsXahW62WtDHw47h8KxqXsjiqD3uixQCqdlj3736YJiVs40hT6dOA3benSEAE6biN9wPdnzwYGEZQptSXwy9SapCxXQ3f2U6fW2PeQCY-rC6K')">
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary-container" data-icon="map" data-weight="fill">map</span>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="eventDescription">Beschreibung <span class="text-outline-variant font-normal">(Optional)</span></label>
+<textarea class="elegant-input w-full rounded-lg px-4 py-4 text-body-md text-on-surface placeholder:text-outline-variant resize-none" id="eventDescription" placeholder="Geben Sie Ihren Gästen einen kurzen Überblick..." rows="4"></textarea>
+</div>
+</form>
+<!-- Action Buttons -->
+<div class="w-full flex flex-col md:flex-row gap-4 mt-section-gap justify-end items-center">
+<button class="w-full md:w-auto px-8 py-4 h-[56px] rounded-[16px] bg-[#F7F3F0] text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors flex items-center justify-center order-2 md:order-1">
+                Überspringen
+            </button>
+<button class="w-full md:w-auto px-8 py-4 h-[56px] rounded-[16px] bg-primary-container text-white font-label-md text-label-md hover:opacity-90 hover:shadow-lg transition-all flex items-center justify-center gap-2 group order-1 md:order-2">
+                Weiter
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+</body></html>

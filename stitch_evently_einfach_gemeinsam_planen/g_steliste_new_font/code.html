@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gästeverwaltung - Eventique</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c1cba6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "primary": "#596244",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "secondary": "#7d562d",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765a05",
+                        "background": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-primary-fixed-variant": "#424a2e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "outline-variant": "#c7c7bb",
+                        "surface-tint": "#596244",
+                        "on-secondary-container": "#7a532a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#46483f",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c1cba6",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "primary-container": "#8e9775",
+                        "secondary-fixed": "#ffdcbd",
+                        "secondary-container": "#ffca98",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#171e06",
+                        "on-tertiary-container": "#392a00",
+                        "primary-fixed": "#dee7c0",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container": "#f0eded",
+                        "outline": "#77786e",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-container": "#b08f3b",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "64px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .icon-thin {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-32">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-background dark:bg-background docked full-width top-0 sticky z-40 transition-all">
+<div class="flex justify-between items-center w-full px-container-padding-mobile py-4">
+<!-- Leading: Avatar -->
+<div class="h-10 w-10 rounded-full overflow-hidden bg-surface-variant flex-shrink-0 border border-outline-variant/30 hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A softly lit, professional headshot of an elegant event planner with a warm smile, set against a neutral pale beige background, high-end editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj5BNMdQCoBpqJNw_cHmkmXkV9t4FkP5QBXHI1ABzqkVNzdu6vfO1EjNEwPnyPvNTEG2blwQ2c2QhaQgT8Ks3yaI8I5t3hiFYlItU4OpbOuIpPBX-8Yp8u2NVJhJQyKq079mG7rzF-l-oNRQp0fKzWk8uXrQ4Pk2XQwlOVlXgs3sWWzMfEwZV_b-tF_fqfbvcLFifKkf4qPJQ_3hptkw4_wxZAjcmvXH-32eD7eQyACl6RtNeWtFcYKpU_LzY2JXOFWw-EFQko67XY"/>
+</div>
+<!-- Headline / Brand -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary dark:text-primary-fixed-dim mx-auto truncate px-4">
+                Eventique
+            </h1>
+<!-- Trailing: Icon -->
+<button aria-label="notifications" class="h-10 w-10 flex items-center justify-center text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined icon-thin" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-container-padding-mobile md:px-container-padding-desktop md:max-w-[1440px] md:mx-auto pt-6">
+<!-- Page Title -->
+<div class="mb-8">
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-background">Gästeverwaltung</h2>
+<p class="font-body-md text-on-surface-variant mt-2">Sommergala 2024</p>
+</div>
+<!-- Top Stats (Bento-style row) -->
+<div class="grid grid-cols-3 gap-3 mb-8">
+<div class="bg-surface-container-lowest rounded-[20px] p-4 flex flex-col items-center justify-center shadow-[0px_10px_30px_rgba(45,45,45,0.02)] border border-surface-variant/50">
+<span class="font-headline-xl-mobile text-primary-container text-2xl leading-none mb-1">50</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Zugesagt</span>
+</div>
+<div class="bg-surface-container-lowest rounded-[20px] p-4 flex flex-col items-center justify-center shadow-[0px_10px_30px_rgba(45,45,45,0.02)] border border-surface-variant/50">
+<span class="font-headline-xl-mobile text-error text-2xl leading-none mb-1">5</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Abgesagt</span>
+</div>
+<div class="bg-surface-container-lowest rounded-[20px] p-4 flex flex-col items-center justify-center shadow-[0px_10px_30px_rgba(45,45,45,0.02)] border border-surface-variant/50">
+<span class="font-headline-xl-mobile text-tertiary-container text-2xl leading-none mb-1">10</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Offen</span>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar mb-6 pb-2 -mx-container-padding-mobile px-container-padding-mobile md:mx-0 md:px-0">
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all ease-out duration-300">Alle</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all ease-out duration-300">Familie</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all ease-out duration-300">Freunde</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all ease-out duration-300">Arbeit</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all ease-out duration-300">Offen</button>
+</div>
+<!-- Guest List (Cards) -->
+<div class="flex flex-col gap-4">
+<!-- Guest Card 1 (Zugesagt) -->
+<div class="bg-surface-container-lowest rounded-[24px] p-5 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-surface-variant/40 flex flex-col gap-3 hover:shadow-[0px_15px_40px_rgba(45,45,45,0.06)] transition-all ease-out duration-300 group cursor-pointer">
+<div class="flex justify-between items-start w-full">
+<h3 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Maximilian von Thurn</h3>
+<div class="px-3 py-1 rounded-full bg-primary/10 text-primary-container font-label-sm text-label-sm uppercase">
+                        Zugesagt
+                    </div>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-[11px] uppercase">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="group">group</span>
+<span>2 Personen</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="restaurant">restaurant</span>
+<span>Vegetarisch</span>
+</div>
+</div>
+</div>
+<!-- Guest Card 2 (Offen) -->
+<div class="bg-surface-container-lowest rounded-[24px] p-5 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-surface-variant/40 flex flex-col gap-3 hover:shadow-[0px_15px_40px_rgba(45,45,45,0.06)] transition-all ease-out duration-300 group cursor-pointer">
+<div class="flex justify-between items-start w-full">
+<h3 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Clara &amp; Johannes Weber</h3>
+<div class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm uppercase">
+                        Offen
+                    </div>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-[11px] uppercase">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="group">group</span>
+<span>2 Personen</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="help">help</span>
+<span>Unbekannt</span>
+</div>
+</div>
+</div>
+<!-- Guest Card 3 (Abgesagt) -->
+<div class="bg-surface-container-lowest rounded-[24px] p-5 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-surface-variant/40 flex flex-col gap-3 hover:shadow-[0px_15px_40px_rgba(45,45,45,0.06)] transition-all ease-out duration-300 group cursor-pointer opacity-75">
+<div class="flex justify-between items-start w-full">
+<h3 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors line-through decoration-outline/30">Familie Schmidt</h3>
+<div class="px-3 py-1 rounded-full bg-error-container/30 text-on-error-container font-label-sm text-label-sm uppercase">
+                        Abgesagt
+                    </div>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-[11px] uppercase">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="group">group</span>
+<span>4 Personen</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="block">block</span>
+<span>Kein Essen</span>
+</div>
+</div>
+</div>
+<!-- Guest Card 4 (Zugesagt) -->
+<div class="bg-surface-container-lowest rounded-[24px] p-5 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-surface-variant/40 flex flex-col gap-3 hover:shadow-[0px_15px_40px_rgba(45,45,45,0.06)] transition-all ease-out duration-300 group cursor-pointer">
+<div class="flex justify-between items-start w-full">
+<h3 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Dr. Elena Rost</h3>
+<div class="px-3 py-1 rounded-full bg-primary/10 text-primary-container font-label-sm text-label-sm uppercase">
+                        Zugesagt
+                    </div>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-[11px] uppercase">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="person">person</span>
+<span>1 Person</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined icon-thin text-[16px]" data-icon="set_meal">set_meal</span>
+<span>Fisch</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Bottom Actions (Replaces BottomNavBar for Task Focus) -->
+<div class="fixed bottom-0 left-0 w-full z-50 px-container-padding-mobile py-4 bg-gradient-to-t from-background via-background/95 to-transparent pb-8">
+<div class="md:max-w-[1440px] md:mx-auto flex gap-3">
+<button class="flex-1 h-[56px] bg-surface-container text-on-surface font-label-md text-label-md rounded-[16px] flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors shadow-sm border border-surface-variant/50">
+<span class="material-symbols-outlined icon-thin" data-icon="share">share</span>
+                Link teilen
+            </button>
+<button class="flex-[1.5] h-[56px] bg-primary-container text-on-primary-container font-label-md text-label-md rounded-[16px] flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-md">
+<span class="material-symbols-outlined icon-thin" data-icon="person_add">person_add</span>
+                Gäste hinzufügen
+            </button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Invitation Card Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "primary-fixed-dim": "#c1cba6",
+                            "error": "#ba1a1a",
+                            "surface-container-low": "#f6f3f2",
+                            "primary": "#596244",
+                            "tertiary-fixed-dim": "#e7c268",
+                            "secondary": "#7d562d",
+                            "surface-container-lowest": "#ffffff",
+                            "tertiary": "#765a05",
+                            "background": "#fcf9f8",
+                            "surface-dim": "#dcd9d9",
+                            "tertiary-fixed": "#ffdf96",
+                            "on-primary-fixed-variant": "#424a2e",
+                            "error-container": "#ffdad6",
+                            "surface-variant": "#e4e2e1",
+                            "on-background": "#1b1c1c",
+                            "outline-variant": "#c7c7bb",
+                            "surface-tint": "#596244",
+                            "on-secondary-container": "#7a532a",
+                            "on-secondary": "#ffffff",
+                            "on-surface-variant": "#46483f",
+                            "on-surface": "#1b1c1c",
+                            "inverse-primary": "#c1cba6",
+                            "surface-container-high": "#eae7e7",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed-dim": "#f0bd8b",
+                            "primary-container": "#8e9775",
+                            "secondary-fixed": "#ffdcbd",
+                            "secondary-container": "#ffca98",
+                            "on-tertiary-fixed-variant": "#5a4400",
+                            "inverse-surface": "#303030",
+                            "on-primary-fixed": "#171e06",
+                            "on-tertiary-container": "#392a00",
+                            "primary-fixed": "#dee7c0",
+                            "on-secondary-fixed": "#2c1600",
+                            "surface-container": "#f0eded",
+                            "outline": "#77786e",
+                            "on-error": "#ffffff",
+                            "surface": "#fcf9f8",
+                            "on-tertiary-fixed": "#251a00",
+                            "surface-bright": "#fcf9f8",
+                            "tertiary-container": "#b08f3b",
+                            "on-secondary-fixed-variant": "#623f18",
+                            "inverse-on-surface": "#f3f0f0",
+                            "surface-container-highest": "#e4e2e1",
+                            "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "section-gap": "64px",
+                            "container-padding-mobile": "20px",
+                            "gutter": "24px",
+                            "container-padding-desktop": "80px",
+                            "base": "8px"
+                    },
+                    "fontFamily": {
+                            "headline-xl-mobile": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-xl": [
+                                    "Hanken Grotesk"
+                            ],
+                            "label-md": [
+                                    "Inter"
+                            ],
+                            "body-sm": [
+                                    "Inter"
+                            ],
+                            "headline-lg": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-md": [
+                                    "Hanken Grotesk"
+                            ],
+                            "body-lg": [
+                                    "Inter"
+                            ],
+                            "body-md": [
+                                    "Inter"
+                            ],
+                            "label-sm": [
+                                    "Inter"
+                            ]
+                    },
+                    "fontSize": {
+                            "headline-xl-mobile": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "headline-xl": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "56px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label-md": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-sm": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "headline-lg": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "label-sm": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.04em",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+            },
+                },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation -->
+<header class="bg-background flex justify-between items-center w-full px-container-padding-mobile py-4 z-10 relative">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity flex items-center justify-center p-2 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<span class="font-headline-lg text-headline-lg text-primary">Vorlagen</span>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-2 rounded-full hover:opacity-80 transition-opacity">
+            Speichern
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Card Preview Container -->
+<div class="w-full flex justify-center items-center py-8 px-container-padding-mobile">
+<div class="relative w-full max-w-sm aspect-[3/4] bg-surface-container-lowest rounded-3xl shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-[#F7F3F0] overflow-hidden flex flex-col items-center justify-center p-8 text-center transition-transform duration-300 ease-out hover:scale-[1.02]">
+<!-- Placeholder for actual card design, currently showing a sophisticated minimal template -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="A sophisticated, minimalist floral background pattern for a digital wedding invitation card. The design features delicate, fine-line botanical illustrations of sage green leaves and subtle soft rose accents over a warm white cream background. The aesthetic is elegant, high-end, and airy, perfect for a luxury boutique event. The lighting is soft and even." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhJpue3wNWnsffG4KZfg4Gbf2L56wMEcJrmhee9Y9NIjIm_ZV87v-jB3QAar8hZ4QDto35PaLhw5vwyNhIufwrFrRq6-bZSR15UOPAUU3uu4J9VYNjGvwlYlidae0bJNLBOgdwfBw2q0PKXt4X6jHimQuYtWBbjn6vswIZRClS94SyxNy1qzkvExuK9urSwdhbNjGldYMCXWEObhFihqjuaVcnl_TxY3C6GTToFiDUYLVyWkyTSPEUVIvpC_cShGAm7a20ZSsNFtVU"/>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center h-full">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-6">Wir heiraten</p>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-4 leading-tight">Anna &amp;<br/>Julian</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-8">12. Oktober 2024</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Schloss Belvedere, Wien</p>
+</div>
+</div>
+</div>
+<!-- Style Selection Area -->
+<div class="w-full mt-4 px-container-padding-mobile">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Stil auswählen</h2>
+<!-- Horizontal Scrollable Cards -->
+<div class="flex overflow-x-auto gap-4 pb-6 hide-scrollbar -mx-container-padding-mobile px-container-padding-mobile">
+<!-- Card 1: Elegant (Active) -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-primary overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail showing an elegant, classic wedding invitation design. It features traditional serif typography centered on a warm cream background with a very subtle, thin gold border. The style conveys timeless luxury and formal sophistication suitable for a high-end gala or classic wedding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABJuOpytzL9os8ODZIA_MlUsxZ3bix7VrjyQxNUtUXUuCLukBQgJcDlA069N5QbC0qabk67IL_IKGDmLMLWPvb7QDb1hotaD2cMTqN7Oh9-_lLReLA4JLxqQgRUDsAGIh18v0w2KPajD3Sep-NyA0hzQiXh1p0R3FzAJ5SpHxKWHImOk_-DQxnVB2oCGf0Q2VbTlDVyaSUcaJxg4I505UjdqczFhd2GTJlf5hrImk74Y4NMYAsQCnYOK2-RCVBVcXvfZRq_5tS6m2d"/>
+</div>
+<span class="font-label-md text-label-md text-primary">Elegant</span>
+</button>
+<!-- Card 2: Floral -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-transparent bg-surface-container overflow-hidden relative group-hover:border-outline-variant transition-colors">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail of a floral themed invitation card. Lush watercolor botanical elements in soft sage green and muted rose pink frame the edges of a white card. The design feels organic, romantic, and fresh, perfect for a spring or garden event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtzGy8Fo0TTfrpEqYHC4M2ON1DS5L_UgoXYDOtbBdBlBMEUp9pWY-uGet3-sDlXXTDBpSW6qEyk3I8qCPghVht3Xgk6DfmrMKeJH23WGQzWvNlTCdOaFNqqzdOx5KATvxJg7YyD2-1FGUet_x1nfPyj9aYtUIsy82NA2lzX8TAWz6xoKG0LDcgrxVHM05NbEHb0kVhkcY6ceuwMs7m_zWxbBKq3osg0759lt1BvMRGz9-xpab_1Zi3sqERpp0chcF2KtfnYAMm_bD7"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Floral</span>
+</button>
+<!-- Card 3: Modern -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-transparent bg-surface-container overflow-hidden relative group-hover:border-outline-variant transition-colors">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail of a modern, minimalist invitation card. The design uses bold, asymmetrical sans-serif typography on a stark white background with a single deep charcoal graphic element. The look is contemporary, stark, and highly design-forward." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVX5FXjU3GrswW7eLg-iJsLDdK0i2rbRDz-aHA56Kq1XC-KIrKKX860L2SzE-I7zJYiEwmkXFcouF5UOwdLE85ervc0_tBsJ0E9Td4AtbXzHioFIaBOxl3aXFaUdRhasPdVwW5Fn22rVF1E0RFFcrpt0TPlVa3hk3bOyL7oDoKg2BFEGUZuFle-8Kq9ExhAAvYxn3WikGAaTHMlawA1W5XYLHj0j65gQ3ktiIurgxsrKIjtWK41aaMyrsq9ULhUmf2xf0IlLzzyrXy"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Modern</span>
+</button>
+<!-- Card 4: Minimal -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-transparent bg-surface-container overflow-hidden relative group-hover:border-outline-variant transition-colors">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail of a purely minimalist invitation card. A vast amount of white space surrounds tiny, perfectly tracked sans-serif text in the very center. It exudes extreme simplicity, calm, and understated confidence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXw-UQ3p1ZnRjtOo7dyFuGP0fFyMuzKSpTyBhoy1tLHHxt5QypZe0CETaB8H7nXdvZK_EhfV3fzJflOzPNO3LZh1MypHE_GvAaPfZZqDntAZetK--lWic2KnIg0JE6ZgXqR-UMz3WVOCcjg3O8lF5xxJBSR3klTf2hi1w8OMrMjYM6VIyURGVPCK9hC9ekEHucuRbIXb_t3QG1p8HpY0GBVFr6LtkYK-TyHV1mCreYjLp9U0RCcYUUKvKLXGNn8vtHmqCWI3oxXRGk"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Minimal</span>
+</button>
+<!-- Card 5: Luxury -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-transparent bg-surface-container overflow-hidden relative group-hover:border-outline-variant transition-colors">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail of a luxury invitation card. It features dark navy blue or black backgrounds with simulated metallic gold foil stamping for the typography and subtle art deco geometric borders. The vibe is opulent, exclusive, and strictly formal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhI-1nNsgGq6XN51pbNoATLbIOAC3V8IU0kOR6MSKiSDd1c6KuW0Py9PW1cL59Tiz5tUfSeCELc0y20g5KnD2E5M9c7J299MX5kHkrYY-iXb6_5OjeJPDS-OYtc6Q5bTjYkbi6CXkSytj7v-K6ckMRP1g2U4Ou_5DmrLNeg9ycuiExW6dXJo2ptpzRWaH0oEmwfXBfF3JpQaQsyudBK8syYw0rXU4OuddJUtUKU6bao-WpZYRpNLC3rYp2gX3JD9LxDfK5vM7Ub5Iq"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Luxury</span>
+</button>
+<!-- Card 6: Casual -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group w-24">
+<div class="w-20 h-24 rounded-xl border-2 border-transparent bg-surface-container overflow-hidden relative group-hover:border-outline-variant transition-colors">
+<img class="w-full h-full object-cover" data-alt="A small preview thumbnail of a casual invitation card. It uses playful, handwritten-style typography over a textured kraft paper or warm beige background. The tone is relaxed, intimate, and friendly, suited for a laid-back gathering or rustic event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA51o7LLMXyNumqeaUh3ulgFIzeFqd_Abt3tgUsXlNyJL7vJ_DKLosrPrc9PcSK-GgSyyoDXgFCvY3FkmxKpmo-BuPs7ble9gYWmysLohVpg_LRT6FbUOXmxQjI72t5AQNiINFjsfx6PUPf2JoqZ9qXsrJgF7EXpvPV8Aa6fNS4bQp-3yPmyDxmYF8QZIqurzaJG77_BGgjjr_k_BzL12jYEIRmjB8553sPyENIQYPIDbSADtsIjbPiAu-X-Dd0InX0t2jQUV4rJHa9"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">Casual</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Editing Tabs -->
+<div class="fixed bottom-0 w-full z-50 bg-surface-container rounded-t-2xl shadow-[0px_-4px_20px_rgba(45,45,45,0.02)] pt-2 pb-6 px-4">
+<!-- Drag Handle Indicator -->
+<div class="w-full flex justify-center mb-4">
+<div class="w-12 h-1 bg-outline-variant rounded-full opacity-50"></div>
+</div>
+<div class="flex justify-between items-center px-2">
+<!-- Tab: Stil (Active) -->
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="w-14 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container transition-transform group-active:scale-95">
+<span class="material-symbols-outlined" data-icon="palette" style="font-variation-settings: 'FILL' 1;">palette</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Stil</span>
+</button>
+<!-- Tab: Farbe -->
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="w-14 h-10 rounded-full flex items-center justify-center text-on-surface-variant group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="format_color_fill">format_color_fill</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Farbe</span>
+</button>
+<!-- Tab: Schrift -->
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="w-14 h-10 rounded-full flex items-center justify-center text-on-surface-variant group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="match_case">match_case</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Schrift</span>
+</button>
+<!-- Tab: Foto -->
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="w-14 h-10 rounded-full flex items-center justify-center text-on-surface-variant group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Foto</span>
+</button>
+<!-- Tab: Text -->
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="w-14 h-10 rounded-full flex items-center justify-center text-on-surface-variant group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Text</span>
+</button>
+</div>
+</div>
+</body></html>

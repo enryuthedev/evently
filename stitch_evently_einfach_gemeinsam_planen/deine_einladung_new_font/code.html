@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Einladung: Hochzeit von Julia &amp; Marc</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c1cba6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "primary": "#596244",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "secondary": "#7d562d",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765a05",
+                        "background": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-primary-fixed-variant": "#424a2e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "outline-variant": "#c7c7bb",
+                        "surface-tint": "#596244",
+                        "on-secondary-container": "#7a532a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#46483f",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c1cba6",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "primary-container": "#8e9775",
+                        "secondary-fixed": "#ffdcbd",
+                        "secondary-container": "#ffca98",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#171e06",
+                        "on-tertiary-container": "#392a00",
+                        "primary-fixed": "#dee7c0",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container": "#f0eded",
+                        "outline": "#77786e",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-container": "#b08f3b",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1.5rem"
+                    },
+                    "spacing": {
+                        "section-gap": "64px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": [
+                                "Hanken Grotesk"
+                        ],
+                        "headline-xl": [
+                                "Hanken Grotesk"
+                        ],
+                        "label-md": [
+                                "Inter"
+                        ],
+                        "body-sm": [
+                                "Inter"
+                        ],
+                        "headline-lg": [
+                                "Hanken Grotesk"
+                        ],
+                        "headline-md": [
+                                "Hanken Grotesk"
+                        ],
+                        "body-lg": [
+                                "Inter"
+                        ],
+                        "body-md": [
+                                "Inter"
+                        ],
+                        "label-sm": [
+                                "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": [
+                                "32px",
+                                {
+                                        "lineHeight": "40px",
+                                        "letterSpacing": "-0.01em",
+                                        "fontWeight": "600"
+                                }
+                        ],
+                        "headline-xl": [
+                                "48px",
+                                {
+                                        "lineHeight": "56px",
+                                        "letterSpacing": "-0.02em",
+                                        "fontWeight": "600"
+                                }
+                        ],
+                        "label-md": [
+                                "14px",
+                                {
+                                        "lineHeight": "16px",
+                                        "letterSpacing": "0.01em",
+                                        "fontWeight": "500"
+                                }
+                        ],
+                        "body-sm": [
+                                "14px",
+                                {
+                                        "lineHeight": "20px",
+                                        "fontWeight": "400"
+                                }
+                        ],
+                        "headline-lg": [
+                                "32px",
+                                {
+                                        "lineHeight": "40px",
+                                        "fontWeight": "500"
+                                }
+                        ],
+                        "headline-md": [
+                                "24px",
+                                {
+                                        "lineHeight": "32px",
+                                        "fontWeight": "500"
+                                }
+                        ],
+                        "body-lg": [
+                                "18px",
+                                {
+                                        "lineHeight": "28px",
+                                        "fontWeight": "400"
+                                }
+                        ],
+                        "body-md": [
+                                "16px",
+                                {
+                                        "lineHeight": "24px",
+                                        "fontWeight": "400"
+                                }
+                        ],
+                        "label-sm": [
+                                "12px",
+                                {
+                                        "lineHeight": "16px",
+                                        "letterSpacing": "0.04em",
+                                        "fontWeight": "600"
+                                }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #dcd9d9;
+            border-radius: 20px;
+        }
+        
+        /* Soft input styling to match "Minimalist design with a soft beige background" */
+        .input-soft {
+            background-color: #f6f3f2; /* surface-container-low */
+            border: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .input-soft:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #8e9775; /* primary-container (Sage Green) */
+            background-color: #f0eded; /* surface-container */
+        }
+
+        /* Hide number input spinners */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- Hero Header Section -->
+<header class="relative w-full h-[353px] min-h-[300px] max-h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A breathtaking, cinematic shot of a grand, historic European castle (Schloss Belvedere) bathed in warm, golden-hour sunlight. The scene is shot from a low, inviting angle, showcasing intricate baroque architecture, lush manicured gardens in the foreground, and a clear, soft blue sky. The aesthetic is highly romantic, editorial, and sophisticated, perfectly suited for a luxury wedding invitation hero image. The colors are dominated by warm stonework, vibrant greens, and soft pastel skies." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFrFVBBW3pXr3t6PmkTF7wo_KARI-885q-HjfFAfRntjIX5ANUxYeB0FtC6F2BUp66DLqI46aURDxR7A3_RjiikzfzJaLpYT-aNjP137BPwVe9sr7hgUSFrJsncc1vtxF9OelaxrCVwiWCVb-F-OviYYZ0TczXesfERROxsv5yA_C_cnieIrGFjS_a1ZGc0GKnqetBzC0S344yQOBQ_NvP2cUxhF8tNh-u47cTihU-CspRasKqxRdRgZNPow3WaW2E0O2cAwK5oC7l')">
+</div>
+<!-- Gradient overlay to blend image into background smoothly -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background"></div>
+</header>
+<!-- Main Content Area (Pulled up over the hero) -->
+<main class="flex-grow relative z-10 -mt-24 sm:-mt-32 px-container-padding-mobile sm:px-0 pb-24">
+<div class="max-w-2xl mx-auto bg-surface-container-lowest rounded-2xl shadow-[0px_10px_30px_rgba(45,45,45,0.04)] border border-outline-variant/20 overflow-hidden">
+<!-- Invitation Content -->
+<div class="p-8 sm:p-12 text-center">
+<p class="font-label-sm text-label-sm text-secondary mb-4 uppercase tracking-widest">Einladung</p>
+<h1 class="font-headline-xl-mobile sm:font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-primary mb-8 leading-tight">
+                    Hochzeit von<br/>Julia &amp; Marc
+                </h1>
+<!-- Event Details Row -->
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 mb-10 text-on-surface-variant font-body-lg text-body-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span>24. August 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">location_on</span>
+<span>Schloss Belvedere</span>
+</div>
+</div>
+<div class="w-16 h-[1px] bg-outline-variant/30 mx-auto mb-10"></div>
+<!-- RSVP Form -->
+<form class="text-left space-y-10" id="rsvpForm">
+<!-- RSVP Status Selection -->
+<div class="space-y-4">
+<label class="block font-headline-md text-headline-md text-on-surface mb-4 text-center">Bist du dabei?</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<!-- Option: Ich komme -->
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="rsvp_status" required="" type="radio" value="yes"/>
+<div class="w-full text-center py-4 px-2 rounded-xl border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-primary-container peer-checked:border-primary-container peer-checked:text-on-primary-container transition-all duration-300 hover:bg-surface-container-low">
+<span class="font-label-md text-label-md block">Ich komme</span>
+</div>
+</label>
+<!-- Option: Vielleicht -->
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="rsvp_status" type="radio" value="maybe"/>
+<div class="w-full text-center py-4 px-2 rounded-xl border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-secondary-container peer-checked:border-secondary-container peer-checked:text-on-secondary-container transition-all duration-300 hover:bg-surface-container-low">
+<span class="font-label-md text-label-md block">Vielleicht</span>
+</div>
+</label>
+<!-- Option: Ich kann nicht -->
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="rsvp_status" type="radio" value="no"/>
+<div class="w-full text-center py-4 px-2 rounded-xl border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-surface-dim peer-checked:border-surface-dim peer-checked:text-on-surface transition-all duration-300 hover:bg-surface-container-low">
+<span class="font-label-md text-label-md block">Ich kann nicht</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Dynamic Section: Only show if coming or maybe -->
+<div class="space-y-10 opacity-50 pointer-events-none transition-opacity duration-300" id="dynamicSection">
+<!-- Plus One Counter -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/20 shadow-sm">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Begleitperson hinzufügen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kinder sind ebenfalls willkommen.</p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-surface-container-highest transition-colors text-on-surface" id="btnMinus" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-8 text-center bg-transparent border-none p-0 font-label-md text-label-md text-on-surface focus:ring-0" id="guestCount" max="5" min="0" readonly="" type="number" value="0"/>
+<button class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-surface-container-highest transition-colors text-on-surface" id="btnPlus" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Food Selection -->
+<div class="space-y-3">
+<label class="block font-label-md text-label-md text-on-surface">Essenswunsch</label>
+<div class="flex flex-wrap gap-3">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="food_pref" type="radio" value="fleisch"/>
+<div class="px-5 py-2.5 rounded-full border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-surface-tint peer-checked:text-on-primary transition-colors hover:bg-surface-container-low">
+<span class="font-label-md text-body-sm">Fleisch</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="food_pref" type="radio" value="veggie"/>
+<div class="px-5 py-2.5 rounded-full border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-surface-tint peer-checked:text-on-primary transition-colors hover:bg-surface-container-low">
+<span class="font-label-md text-body-sm">Veggie</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="food_pref" type="radio" value="vegan"/>
+<div class="px-5 py-2.5 rounded-full border border-outline-variant/30 bg-surface-container-lowest peer-checked:bg-surface-tint peer-checked:text-on-primary transition-colors hover:bg-surface-container-low">
+<span class="font-label-md text-body-sm">Vegan</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Message Box -->
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-on-surface" for="message">Nachricht an Gastgeber (Optional)</label>
+<textarea class="w-full input-soft rounded-t-xl p-4 font-body-md text-body-md text-on-surface resize-none" id="message" placeholder="Lass uns wissen, ob du Allergien hast oder einen Songwunsch..." rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-14 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary rounded-xl font-label-md text-label-md transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 mt-4" type="submit">
+<span>Antwort senden</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</main>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rsvpRadios = document.querySelectorAll('input[name="rsvp_status"]');
+            const dynamicSection = document.getElementById('dynamicSection');
+            const btnMinus = document.getElementById('btnMinus');
+            const btnPlus = document.getElementById('btnPlus');
+            const guestCountInput = document.getElementById('guestCount');
+
+            // Handle RSVP status change to enable/disable specific form parts
+            rsvpRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'yes' || e.target.value === 'maybe') {
+                        dynamicSection.classList.remove('opacity-50', 'pointer-events-none');
+                    } else {
+                        dynamicSection.classList.add('opacity-50', 'pointer-events-none');
+                        // Reset sub-selections if "No"
+                        guestCountInput.value = 0;
+                        document.querySelectorAll('input[name="food_pref"]').forEach(r => r.checked = false);
+                    }
+                });
+            });
+
+            // Handle Guest Counter
+            btnMinus.addEventListener('click', () => {
+                let currentVal = parseInt(guestCountInput.value);
+                if (currentVal > 0) {
+                    guestCountInput.value = currentVal - 1;
+                }
+            });
+
+            btnPlus.addEventListener('click', () => {
+                let currentVal = parseInt(guestCountInput.value);
+                if (currentVal < 5) { // Arbitrary max for styling
+                    guestCountInput.value = currentVal + 1;
+                }
+            });
+
+            // Handle form submission (prevent default for demo)
+            document.getElementById('rsvpForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = e.target.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                // Simple visual feedback
+                btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Wird gesendet...</span>`;
+                btn.classList.add('opacity-80');
+                
+                setTimeout(() => {
+                    btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check</span><span>Vielen Dank!</span>`;
+                    btn.classList.remove('bg-primary-container', 'hover:bg-primary', 'text-on-primary-container');
+                    btn.classList.add('bg-secondary', 'text-on-secondary');
+                    
+                    // Reset after 3 seconds
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.add('bg-primary-container', 'hover:bg-primary', 'text-on-primary-container');
+                        btn.classList.remove('bg-secondary', 'text-on-secondary', 'opacity-80');
+                    }, 3000);
+                }, 1500);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Terminfindung - Eventique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c1cba6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "primary": "#596244",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "secondary": "#7d562d",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765a05",
+                        "background": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-primary-fixed-variant": "#424a2e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "outline-variant": "#c7c7bb",
+                        "surface-tint": "#596244",
+                        "on-secondary-container": "#7a532a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#46483f",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c1cba6",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "primary-container": "#8e9775",
+                        "secondary-fixed": "#ffdcbd",
+                        "secondary-container": "#ffca98",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#171e06",
+                        "on-tertiary-container": "#392a00",
+                        "primary-fixed": "#dee7c0",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container": "#f0eded",
+                        "outline": "#77786e",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-container": "#b08f3b",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "64px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-variant');
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline-variant');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative pb-24 md:pb-0">
+<!-- Navigation Header -->
+<header class="flex justify-between items-center w-full px-container-padding-mobile py-4 bg-background dark:bg-background docked full-width top-0 sticky z-40">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+</button>
+<div class="font-headline-xl-mobile text-headline-xl-mobile text-primary dark:text-primary-fixed-dim">Eventique</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-outline-variant hover:opacity-80 transition-opacity">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A close up, high key portrait of a sophisticated woman with subtle makeup and simple elegant jewelry, smiling warmly. The lighting is soft and flattering, suitable for a professional yet approachable profile picture in a premium event planning app. Soft minimalism aesthetic with a light beige background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDqX-_SHHlMcZ_AbNUh5nx5XUyRsbIS7JFUDdLgIt4yWS8LzD8YBZqyIyx6yjGdPYi-YCFzcONQyJPFO86ykbSupxEja9Epy55txD2EMsSMDF1pkHNnoZPxfxYGj_QZ9ZBk5A3PvccREUFLIQnlhrsFum2xlurar3pCTQcXHOePkQwtkwMUzoHeF4XUjh3rv430SD244SipIeE6MlCy8hUF6ANPhG9K1zZauYGUm3u6V8J6kRPw74-_6B_f-AbqqcK8TYTjNncIT5t"/>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center px-container-padding-mobile md:px-container-padding-desktop py-8 md:py-12 max-w-[1440px] mx-auto w-full">
+<!-- Header Section -->
+<div class="w-full max-w-2xl text-center mb-10 md:mb-16">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-background mb-4">
+                Welcher Termin passt am besten?
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Stimme dich mit deinen Gästen ab. Wähle den finalen Termin für deine Veranstaltung.
+            </p>
+</div>
+<!-- Progress Indicator (Wizard) -->
+<div class="w-full max-w-2xl mb-12 flex items-center justify-center gap-2">
+<div class="w-16 h-1 rounded-full bg-surface-variant"></div>
+<div class="w-16 h-1 rounded-full bg-[#D4A373]"></div> <!-- Soft Rose from brand guidelines -->
+<div class="w-16 h-1 rounded-full bg-surface-variant"></div>
+</div>
+<!-- Poll Options Grid -->
+<div class="w-full max-w-2xl grid grid-cols-1 gap-4 mb-section-gap">
+<!-- Option 1: Best Match (Highlighted) -->
+<div class="group relative rounded-[24px] bg-[#FDF8F5] border border-primary-container p-6 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] hover:shadow-[0px_15px_40px_rgba(45,45,45,0.08)] transition-all duration-300 ease-out cursor-pointer overflow-hidden">
+<!-- Subtle background accent for best match -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm mb-3 uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            Beste Option
+                        </div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Freitag, 15. Oktober</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">19:00 Uhr</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary-container bg-surface text-primary mb-2">
+<span class="material-symbols-outlined font-bold">check</span>
+</div>
+<span class="font-label-md text-label-md text-primary">10 von 12 können</span>
+</div>
+</div>
+</div>
+<!-- Option 2 -->
+<div class="group relative rounded-[24px] bg-surface border border-[#F2F2F2] p-6 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] hover:shadow-[0px_15px_40px_rgba(45,45,45,0.08)] hover:border-[#F7F3F0] transition-all duration-300 ease-out cursor-pointer">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Samstag, 16. Oktober</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">18:00 Uhr</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border border-outline-variant bg-transparent text-outline-variant group-hover:border-primary group-hover:text-primary transition-colors mb-2">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">8 von 12 können</span>
+</div>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="group relative rounded-[24px] bg-surface border border-[#F2F2F2] p-6 shadow-[0px_10px_30px_rgba(45,45,45,0.04)] hover:shadow-[0px_15px_40px_rgba(45,45,45,0.08)] hover:border-[#F7F3F0] transition-all duration-300 ease-out cursor-pointer opacity-80">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Sonntag, 17. Oktober</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">15:00 Uhr</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border border-outline-variant bg-transparent text-outline-variant group-hover:border-primary group-hover:text-primary transition-colors mb-2">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">4 von 12 können</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button Area -->
+<div class="w-full max-w-2xl flex justify-center">
+<button class="w-full md:w-auto px-8 h-[56px] rounded-[16px] bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 ease-out shadow-[0px_4px_14px_rgba(142,151,117,0.2)] flex items-center justify-center gap-2">
+                Termin festlegen
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface-container shadow-[0px_-4px_20px_rgba(45,45,45,0.02)] rounded-t-xl pb-safe">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:bg-primary/10 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:bg-primary/10 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">dashboard_customize</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Vorlagen</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:bg-primary/10 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Profil</span>
+</a>
+</nav>
+<!-- CSS for iOS Safe Area padding -->
+<style>
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 1rem);
+        }
+    </style>
+</body></html>

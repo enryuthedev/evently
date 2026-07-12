@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventique - Onboarding</title>
+<!-- Google Fonts: Hanken Grotesk & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c1cba6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "primary": "#596244",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "secondary": "#7d562d",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765a05",
+                        "background": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-primary-fixed-variant": "#424a2e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "outline-variant": "#c7c7bb",
+                        "surface-tint": "#596244",
+                        "on-secondary-container": "#7a532a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#46483f",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c1cba6",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "primary-container": "#8e9775",
+                        "secondary-fixed": "#ffdcbd",
+                        "secondary-container": "#ffca98",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#171e06",
+                        "on-tertiary-container": "#392a00",
+                        "primary-fixed": "#dee7c0",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container": "#f0eded",
+                        "outline": "#77786e",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-container": "#b08f3b",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary-container": "#272f15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "64px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": [
+                            "Hanken Grotesk"
+                        ],
+                        "headline-xl": [
+                            "Hanken Grotesk"
+                        ],
+                        "label-md": [
+                            "Inter"
+                        ],
+                        "body-sm": [
+                            "Inter"
+                        ],
+                        "headline-lg": [
+                            "Hanken Grotesk"
+                        ],
+                        "headline-md": [
+                            "Hanken Grotesk"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "label-sm": [
+                            "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-xl": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-sm": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Floating animation for decorative icons */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 5s ease-in-out 1s infinite; }
+        .animate-float-slow { animation: float 6s ease-in-out 2s infinite; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- Main Container -->
+<main class="flex-1 flex flex-col w-full max-w-[1440px] mx-auto overflow-hidden relative">
+<!-- Subtle Background Glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] bg-primary-fixed-dim/20 rounded-full blur-[80px] -z-10"></div>
+<!-- Hero Visual Section -->
+<section class="flex-1 relative flex items-center justify-center pt-12 pb-8 px-container-padding-mobile min-h-[397px] md:min-h-[486px]">
+<!-- Central Invitation Card Composition -->
+<div class="relative w-full max-w-[280px] aspect-[3/4] md:max-w-[340px]">
+<!-- Main Card -->
+<div class="absolute inset-0 bg-surface-container-lowest rounded-xl shadow-[0px_20px_50px_rgba(45,45,45,0.08)] border border-surface-variant overflow-hidden transform -rotate-2 hover:rotate-0 transition-transform duration-700 ease-out z-10">
+<img class="w-full h-full object-cover" data-alt="A highly detailed, elegant digital invitation card displayed against a pristine, soft minimal background. The card itself features a beautiful, understated abstract floral motif rendered in gentle watercolor strokes of sage green and pale rose, highlighted with thin, subtle gold foil lines. The lighting is high-key and soft, suggesting natural daylight in a premium studio, emphasizing a serene, romantic, and professional 'Soft Minimalism' aesthetic without any harsh shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl7COTyCLD0Czr6BxCs7383hLZzJlE1SXMGBphaPT78KC6vRgkXTVM8ZwAJoRiZLzysrN2KwtNdWt6Ti_6IU49S8s15iDjLB0lU9JGP59kllWxbwCgu8mbYw5scSySKPOjgIzxLpKbK6PQE87XGLjbhqLapm9B9vAafTdr06KO222ytyDdXesQ1hxDRlqI6abHwpFuKCbmHwO8tqjDp97lFbZ9-N8M8lgBCupJrIxlH9LNsLcUWrSu7WDU3fQ2d8PAXqDq_TZhuaGl"/>
+</div>
+<!-- Floating Decor: Calendar -->
+<div class="absolute -top-6 -right-6 md:-right-10 z-20 animate-float">
+<div class="flex items-center justify-center w-14 h-14 bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-[0px_8px_24px_rgba(45,45,45,0.06)] border border-surface-variant text-primary">
+<span class="material-symbols-outlined text-[28px]">calendar_today</span>
+</div>
+</div>
+<!-- Floating Decor: Heart -->
+<div class="absolute top-1/2 -left-8 -translate-y-1/2 z-20 animate-float-delayed">
+<div class="flex items-center justify-center w-12 h-12 bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-[0px_8px_24px_rgba(45,45,45,0.06)] border border-surface-variant text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+</div>
+<!-- Floating Decor: Location Pin -->
+<div class="absolute -bottom-4 -right-4 z-20 animate-float-slow">
+<div class="flex items-center justify-center w-12 h-12 bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-[0px_8px_24px_rgba(45,45,45,0.06)] border border-surface-variant text-primary-container">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Content & Actions Section -->
+<section class="w-full px-container-padding-mobile md:px-container-padding-desktop pb-12 pt-4 flex flex-col items-center text-center z-30">
+<div class="max-w-xl mx-auto flex flex-col items-center">
+<!-- Branding Context -->
+<p class="font-label-sm text-label-sm uppercase text-primary tracking-widest mb-6">EVENTIQUE</p>
+<!-- Main Headline -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface leading-tight mb-section-gap">
+<span class="block">Plane Events.</span>
+<span class="block text-primary">Gestalte Einladungen.</span>
+<span class="block">Sammle Zusagen.</span>
+</h1>
+<!-- Action Buttons Container -->
+<div class="w-full max-w-sm space-y-4 flex flex-col">
+<!-- Primary Button -->
+<button class="w-full h-[56px] flex items-center justify-center bg-primary-container text-surface-container-lowest font-label-md text-label-md rounded-xl shadow-[0px_8px_20px_rgba(142,151,117,0.15)] hover:bg-primary transition-colors duration-300 ease-out active:scale-[0.98]">
+                        Neues Event erstellen
+                    </button>
+<!-- Secondary Button -->
+<button class="w-full h-[56px] flex items-center justify-center bg-surface-container text-on-surface font-label-md text-label-md rounded-xl border border-transparent hover:border-outline-variant hover:bg-surface-container-high transition-all duration-300 ease-out active:scale-[0.98]">
+                        Vorlagen ansehen
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>
